@@ -5,7 +5,7 @@ import { AnimatedDiv } from "../../../shared/ui/AnimatedDiv";
 
 function Home() {
   return (
-    <AnimatedDiv classes="flex min-h-screen w-screen flex-col bg-neutral-900 bg-gradient-to-t from-neutral-900 to-black/96 text-violet-100/75">
+    <AnimatedDiv classes="flex min-h-screen w-screen flex-col bg-neutral-900 bg-gradient-to-t from-neutral-900 to-black/96 text-violet-100">
       <Header />
       <Title />
       <div className="mx-auto mt-10 flex w-[80%] flex-col gap-4">

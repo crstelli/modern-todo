@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router";
 import { AnimatePresence } from "motion/react";
 
 import { Landing } from "./features/landing";
@@ -8,14 +8,21 @@ export default function App() {
   return (
     <AnimatePresence mode="wait">
       <BrowserRouter>
-        <Routes>
-          <Route index element={<Landing />} />
-
-          <Route path="/home" element={<Home />} />
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
     </AnimatePresence>
   );
 }
 
-// Create Home Route
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <Routes location={location} key={location.pathname}>
+      <Route index element={<Landing />} />
+
+      <Route path="/home" element={<Home />} />
+    </Routes>
+  );
+}
+
+// TODO: Sistemare le animazioni tra le pagine, fade-id e fade-out

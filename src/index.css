@@ -4,5 +4,5 @@
 html,
 body,
 #root {
-  @apply min-h-screen w-screen font-[Nunito];
+  @apply min-h-screen w-screen bg-black font-[Nunito];
 }

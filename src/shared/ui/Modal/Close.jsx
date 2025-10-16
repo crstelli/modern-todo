@@ -1,7 +1,7 @@
 import { X } from "lucide-react";
 
-function Close() {
-  return <X className="absolute top-2 right-2" />;
+function Close(props) {
+  return <X {...props} className="absolute top-2 right-2" />;
 }
 
 export { Close };

@@ -6,11 +6,11 @@ import { AnimatedDiv } from "../../../shared/ui/AnimatedDiv";
 
 function Landing() {
   return (
-    <AnimatedDiv classes="relative flex h-screen w-screen flex-col items-center justify-center gap-6 overflow-hidden bg-gradient-to-t from-neutral-900 to-black/96 text-violet-100/75">
+    <AnimatedDiv classes="relative flex h-screen w-screen flex-col items-center justify-center gap-6 overflow-hidden bg-gradient-to-t from-neutral-900 to-black/96 text-violet-100">
       <Header />
       <Button />
       <Footer />
-      <div className="absolute -top-[500px] -right-[300px] aspect-square w-[600px] rotate-30 rounded-full border-4 border-violet-400 bg-gradient-to-br from-neutral-950 to-neutral-900"></div>
+      <div className="absolute -top-[500px] -right-[300px] aspect-square w-[600px] rotate-30 rounded-full border-4 border-violet-400 bg-gradient-to-br from-neutral-950 to-neutral-900 lg:-top-[400px] lg:-right-[300px]"></div>
     </AnimatedDiv>
   );
 }

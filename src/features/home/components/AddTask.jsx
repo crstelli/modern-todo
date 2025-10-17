@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useAddTask } from "../hooks/useTask";
 import { useModalClose } from "../hooks/useModal";
 
+import { AnimatedDiv } from "../../../shared/ui/AnimatedDiv";
+
 function AddTask({ children }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -21,7 +23,7 @@ function AddTask({ children }) {
   }
 
   return (
-    <div className="relative m-auto flex flex-col rounded-lg bg-neutral-950 p-4">
+    <AnimatedDiv classes="relative m-auto flex flex-col rounded-lg bg-neutral-950 p-4">
       <h1 className="font-thin uppercase">Add a new task</h1>
       <form className="mt-4 flex flex-col gap-3" onSubmit={handleSubmit}>
         <input
@@ -40,7 +42,7 @@ function AddTask({ children }) {
         />
         {children}
       </form>
-    </div>
+    </AnimatedDiv>
   );
 }
 

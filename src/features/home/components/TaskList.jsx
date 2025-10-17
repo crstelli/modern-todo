@@ -21,7 +21,7 @@ function Task({ task }) {
 
   if (task.check)
     return (
-      <div className="grid grid-cols-[40px_1fr_40px] items-center gap-3 rounded-lg border border-violet-300 px-4 py-2 text-violet-300">
+      <div className="grid cursor-pointer grid-cols-[40px_1fr_40px] items-center gap-3 rounded-lg border border-violet-300 px-4 py-2 text-violet-300">
         <Check
           onClick={() => checkTask(task.id)}
           strokeWidth={1}
@@ -41,7 +41,7 @@ function Task({ task }) {
     );
 
   return (
-    <div className="grid grid-cols-[40px_1fr_40px] items-center gap-3 rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-2">
+    <div className="grid cursor-pointer grid-cols-[40px_1fr_40px] items-center gap-3 rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-2">
       <Square
         onClick={() => checkTask(task.id)}
         strokeWidth={0.7}
